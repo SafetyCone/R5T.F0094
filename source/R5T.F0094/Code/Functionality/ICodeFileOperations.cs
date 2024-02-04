@@ -27,8 +27,8 @@ namespace R5T.F0094
             WinFormContext winFormContext)
         {
             // Safety checks.
-            F0000.FileSystemOperator.Instance.VerifyFileDoesNotExists(winFormContext.CodeFilePath);
-            F0000.FileSystemOperator.Instance.VerifyFileDoesNotExists(winFormContext.DesignerFilePath);
+            Instances.FileSystemOperator.Verify_File_DoesNotExist(winFormContext.CodeFilePath);
+            Instances.FileSystemOperator.Verify_File_DoesNotExist(winFormContext.DesignerFilePath);
 
             // Run.
             await CodeFileGenerationOperations.Instance.CreateFormClassCodeFile(
